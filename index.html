@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+ <style>
+    body{
+      padding:1em;
+      font-size:2rem;
+    }
+  </style>
+
+
+  <py-env>
+    - numpy
+    - matplotlib
+    - paths:
+      - /data.py
+  </py-env>
+  
+</head>
+ 
+<body>
+  
+<py-script>
+import matplotlib.pyplot as plt
+from data import make_x_and_y
+
+x, y = make_x_and_y(n=1000)
+
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+fig
+</py-script>
+
+
+<div id="myData"</div>
+
+
+  
+</body>
+
+</html>
